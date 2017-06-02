@@ -1,4 +1,3 @@
-import sys
 import subprocess
 import tempfile
 from PIL import Image
@@ -32,6 +31,7 @@ class pytesseract(object):
 
 
 def main():
+    import sys
     pt = pytesseract()
     picture = Image.open(sys.argv[1])
     reslut = pt.run_tesseract(picture)
